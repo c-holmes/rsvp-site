@@ -1,0 +1,93 @@
+/**
+ *Base
+ **/
+/* line 4, ../scss/style.scss */
+body {
+  background: #BBB;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+/* line 10, ../scss/style.scss */
+.wrapper {
+  max-width: 675px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* line 20, ../scss/style.scss */
+main {
+  height: 650px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* line 26, ../scss/style.scss */
+.top-header {
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* line 32, ../scss/style.scss */
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 36, ../scss/style.scss */
+nav ul li {
+  list-style: none;
+}
+/* line 40, ../scss/style.scss */
+nav ul ul {
+  padding: 0;
+  font-size: 0;
+  margin: 0;
+  text-align: justify;
+  text-justify: distribute;
+  width: 100%;
+}
+/* line 48, ../scss/style.scss */
+nav ul ul li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 100;
+  color: #fff;
+}
+/* line 60, ../scss/style.scss */
+nav ul > li:nth-child(1) ul li {
+  font-size: 26px;
+}
+/* line 64, ../scss/style.scss */
+nav ul > li:nth-child(2) ul li {
+  font-size: 19px;
+}
+/* line 68, ../scss/style.scss */
+nav ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 1, ../scss/_video.scss */
+.homepage-hero-module {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 6, ../scss/_video.scss */
+.homepage-hero-module .filter {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

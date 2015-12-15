@@ -1,0 +1,76 @@
+/**
+ *Base
+ **/
+body{
+    background: #BBB;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.wrapper {
+    max-width: 675px;
+    margin: 0 auto;
+    position:absolute;
+    top:0;
+    left: 0;
+    right:0;
+    z-index: 99;
+}
+
+main{
+    height: 650px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.top-header{
+    text-align: center;
+    padding-top: 30px;
+}
+
+nav{
+    ul{
+        padding: 0;
+        margin: 0;
+
+        li{
+            list-style: none;
+        }
+
+        ul{
+            padding: 0;
+            font-size: 0;
+            margin: 0;
+            text-align: justify;
+            text-justify: distribute;
+            width: 100%;
+
+            li{
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 26px;
+                font-weight: 100;
+                color: #fff;
+            }
+        }
+
+        & > li:nth-child(1) ul li{
+            font-size: 26px;
+        }
+
+        & > li:nth-child(2) ul li{
+            font-size: 19px;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+@import "video";
