@@ -16,7 +16,7 @@ body {
 
 /* line 15, ../scss/style.scss */
 main {
-  height: 400px;
+  min-height: 400px;
   width: 100%;
   background-color: #fff;
   position: relative;
@@ -63,40 +63,95 @@ main .border-left, main .border-right {
   width: 10px;
 }
 /* line 62, ../scss/style.scss */
+main img {
+  max-width: 300px;
+  float: left;
+  padding-right: 10px;
+}
+/* line 68, ../scss/style.scss */
+main h2 {
+  margin: 0;
+  padding: 10px 0 0 0;
+  font-size: 20px;
+  font-weight: 300;
+}
+/* line 75, ../scss/style.scss */
+main p {
+  font-weight: 300;
+}
+/* line 79, ../scss/style.scss */
 main .border-left {
   left: -4px;
 }
-/* line 66, ../scss/style.scss */
+/* line 83, ../scss/style.scss */
 main .border-right {
   right: -4px;
 }
+/* line 87, ../scss/style.scss */
+main .wrap {
+  padding: 10px;
+}
+/* line 90, ../scss/style.scss */
+main .wrap.home {
+  text-align: center;
+}
+/* line 95, ../scss/style.scss */
+main .pic-bg {
+  background-image: url(../img/chris-emma-pic.jpg);
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  padding: 30%;
+  box-sizing: border-box;
+}
+/* line 104, ../scss/style.scss */
+main .link-area {
+  margin-bottom: 10px;
+}
+/* line 107, ../scss/style.scss */
+main .link-area button {
+  background: #A9B6C2;
+  border: 0;
+  padding: 3px 10px;
+}
+/* line 112, ../scss/style.scss */
+main .link-area button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 18px;
+}
+/* line 120, ../scss/style.scss */
+main .link-area button:first-child {
+  background: #929BA2;
+}
 
-/* line 71, ../scss/style.scss */
+/* line 126, ../scss/style.scss */
 .top-header {
   text-align: center;
   padding-top: 15px;
 }
-/* line 75, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .top-header img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 81, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 nav {
   height: 50px;
   padding: 10px 0;
 }
-/* line 85, ../scss/style.scss */
+/* line 140, ../scss/style.scss */
 nav ul {
   padding: 0;
   margin: 0;
 }
-/* line 89, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 nav ul li {
   list-style: none;
 }
-/* line 93, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 nav ul ul {
   padding: 0;
   font-size: 0;
@@ -105,7 +160,7 @@ nav ul ul {
   text-justify: distribute;
   width: 100%;
 }
-/* line 101, ../scss/style.scss */
+/* line 156, ../scss/style.scss */
 nav ul ul li {
   position: relative;
   display: inline-block;
@@ -116,29 +171,29 @@ nav ul ul li {
   font-weight: 100;
   color: #fff;
 }
-/* line 112, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 nav ul ul:first-child {
   margin-bottom: 10px;
 }
-/* line 117, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 nav ul > li:nth-child(1) ul li {
   font-size: 13px;
 }
-/* line 121, ../scss/style.scss */
+/* line 176, ../scss/style.scss */
 nav ul > li:nth-child(2) ul li {
   font-size: 10px;
 }
-/* line 125, ../scss/style.scss */
+/* line 180, ../scss/style.scss */
 nav ul:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
 
-/* line 135, ../scss/style.scss */
+/* line 190, ../scss/style.scss */
 footer .footer-logo {
   text-align: center;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 /* line 5, ../scss/_video.scss */
@@ -148,7 +203,7 @@ footer .footer-logo {
   left: 0;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 720px;
   z-index: -1;
   background-image: url("../img/site-bg.jpg");
   background-position: top center;
@@ -178,70 +233,106 @@ footer .footer-logo {
 }
 
 @media all and (min-width: 767px) {
-  /* line 47, ../scss/_video.scss */
+  /* line 46, ../scss/_video.scss */
+  .homepage-hero-module {
+    height: 100%;
+  }
+  /* line 49, ../scss/_video.scss */
   .homepage-hero-module video {
     display: block;
   }
 }
 @media all and (min-width: 360px) {
-  /* line 145, ../scss/style.scss */
+  /* line 200, ../scss/style.scss */
   nav ul > li:nth-child(1) ul li {
     font-size: 14px;
   }
-  /* line 149, ../scss/style.scss */
+  /* line 204, ../scss/style.scss */
   nav ul > li:nth-child(2) ul li {
     font-size: 11px;
   }
 }
 @media all and (min-width: 480px) {
-  /* line 157, ../scss/style.scss */
+  /* line 212, ../scss/style.scss */
   nav {
     height: 67px;
   }
-  /* line 161, ../scss/style.scss */
+  /* line 216, ../scss/style.scss */
   nav ul > li:nth-child(1) ul li {
     font-size: 20px;
   }
-  /* line 165, ../scss/style.scss */
+  /* line 220, ../scss/style.scss */
   nav ul > li:nth-child(2) ul li {
     font-size: 15px;
   }
 }
 @media all and (min-width: 600px) {
-  /* line 173, ../scss/style.scss */
+  /* line 228, ../scss/style.scss */
   nav {
     padding: 0;
   }
-  /* line 177, ../scss/style.scss */
+  /* line 232, ../scss/style.scss */
   nav ul > li:nth-child(1) ul li {
     font-size: 25px;
   }
-  /* line 181, ../scss/style.scss */
+  /* line 236, ../scss/style.scss */
   nav ul > li:nth-child(2) ul li {
     font-size: 19px;
   }
-  /* line 185, ../scss/style.scss */
+  /* line 240, ../scss/style.scss */
   nav ul ul:first-child {
+    margin: 0;
+  }
+
+  /* line 247, ../scss/style.scss */
+  main .pic-bg {
+    float: left;
+    margin-right: 10px;
+    width: 40%;
+    height: 380px;
+    padding: 0;
+  }
+  /* line 256, ../scss/style.scss */
+  main .wrap.home {
+    text-align: left;
+  }
+  /* line 261, ../scss/style.scss */
+  main .link-area {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     margin: 0;
   }
 }
 @media all and (min-width: 767px) {
-  /* line 193, ../scss/style.scss */
+  /* line 271, ../scss/style.scss */
   body {
     background-image: none;
   }
 
-  /* line 197, ../scss/style.scss */
+  /* line 275, ../scss/style.scss */
   nav {
     height: 83px;
   }
-  /* line 201, ../scss/style.scss */
+  /* line 279, ../scss/style.scss */
   nav ul > li:nth-child(1) ul li {
     font-size: 30px;
   }
-  /* line 205, ../scss/style.scss */
+  /* line 283, ../scss/style.scss */
   nav ul > li:nth-child(2) ul li {
     font-size: 23px;
+  }
+}
+@media all and (min-width: 1300px) {
+  /* line 291, ../scss/style.scss */
+  .wrapper {
+    padding-top: 2%;
+  }
+}
+@media all and (min-width: 1500px) {
+  /* line 297, ../scss/style.scss */
+  .wrapper {
+    padding-top: 4%;
   }
 }
 

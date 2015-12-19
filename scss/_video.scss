@@ -8,7 +8,7 @@ $gradient-col-2:    rgba(255,255,255,0);
     left: 0;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 720px;
     z-index: -1;
     background-image: url('../img/site-bg.jpg');
     background-position: top center;
@@ -44,6 +44,8 @@ $gradient-col-2:    rgba(255,255,255,0);
 
 @media all and (min-width:767px){
     .homepage-hero-module{
+        height: 100%;
+
         video{
             display: block;
         }
