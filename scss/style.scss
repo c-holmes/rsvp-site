@@ -2,33 +2,86 @@
  *Base
  **/
 body{
-    background: #BBB;
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
 
 .wrapper {
-    max-width: 675px;
+    padding: 0 20px;
+    max-width: 755px;
     margin: 0 auto;
-    position:absolute;
-    top:0;
-    left: 0;
-    right:0;
-    z-index: 99;
 }
 
 main{
-    height: 650px;
+    height: 400px;
     width: 100%;
     background-color: #fff;
+    position: relative;
+
+    .border-top, .border-bottom{
+        background-image: url(../img/border-horz-mid.png);
+        background-repeat: repeat-x;
+        position: absolute;
+        width: 100%;
+        height: 10px;
+
+        &:before, &:after{
+            content: '';
+            position: absolute;
+            width: 49px;
+            height: 10px;
+        }
+
+        &:before{
+            left: -3px;
+            background-image: url(../img/border-horz-left.png);
+        }
+
+        &:after{
+            right: -3px;
+            background-image: url(../img/border-horz-right.png);
+        }
+    }
+
+    .border-top{
+        top: -3px;
+    }
+
+    .border-bottom{
+        bottom:-3px;
+    }
+
+    .border-left, .border-right{
+        background-image: url(../img/border-vertical-mid.png);
+        background-repeat: repeat-y;
+        position: absolute;
+        height: 100%;
+        width: 10px;
+    }
+
+    .border-left{
+        left: -4px;
+    }
+
+    .border-right{
+        right: -4px;
+    }
 }
 
 .top-header{
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 nav{
+    height: 50px;
+    padding: 10px 0;
+
     ul{
         padding: 0;
         margin: 0;
@@ -51,18 +104,22 @@ nav{
                 vertical-align: top;
                 text-align: center;
                 text-transform: uppercase;
-                font-size: 26px;
+                font-size: 30px;
                 font-weight: 100;
                 color: #fff;
+            }
+
+            &:first-child{
+                margin-bottom: 10px;
             }
         }
 
         & > li:nth-child(1) ul li{
-            font-size: 26px;
+            font-size: 13px;
         }
 
         & > li:nth-child(2) ul li{
-            font-size: 19px;
+            font-size: 10px;
         }
 
         &:after {
@@ -73,4 +130,81 @@ nav{
     }
 }
 
+
+footer{
+    .footer-logo{
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
 @import "video";
+@media all and (min-width: 360px){
+    nav{
+        ul{
+            & > li:nth-child(1) ul li{
+                font-size: 14px;
+            }
+
+            & > li:nth-child(2) ul li{
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 480px){
+    nav{
+        height: 67px;
+
+        ul{
+            & > li:nth-child(1) ul li{
+                font-size: 20px;
+            }
+
+            & > li:nth-child(2) ul li{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 600px){
+    nav{
+        padding: 0;
+
+        ul{
+            & > li:nth-child(1) ul li{
+                font-size: 25px;
+            }
+
+            & > li:nth-child(2) ul li{
+                font-size: 19px;
+            }
+
+            ul:first-child{
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 767px){
+    body{
+        background-image: none;
+    }
+
+    nav{
+        height: 83px;
+
+        ul{
+            & > li:nth-child(1) ul li{
+                font-size: 30px;
+            }
+
+            & > li:nth-child(2) ul li{
+                font-size: 23px;
+            }
+        }
+    }
+}

@@ -1,13 +1,52 @@
+$gradient-col-1:    rgba(255,255,255,1);
+$gradient-col-2:    rgba(255,255,255,0);
+
+
 .homepage-hero-module{
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../img/site-bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
 
     .filter{
         background-color: rgba(255,255,255,.2);
         position: absolute;
         width: 100%;
+        height: 100%;
         top: 0;
+
+        /* Safari 4-5, Chrome 1-9 */
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($gradient-col-1), to($gradient-col-2));
+
+        /* Safari 5.1, Chrome 10+ */
+        background: -webkit-linear-gradient(top, $gradient-col-2 0%, $gradient-col-2 30%, $gradient-col-1 100%);
+
+        /* Firefox 3.6+ */
+        background: -moz-linear-gradient(top, $gradient-col-2, $gradient-col-1);
+
+        /* IE 10 */
+        background: -ms-linear-gradient(top, $gradient-col-2, $gradient-col-1);
+
+        /* Opera 11.10+ */
+        background: -o-linear-gradient(top, $gradient-col-2, $gradient-col-1);
+    }
+
+    video{
+        display: none;
+    }
+}
+
+@media all and (min-width:767px){
+    .homepage-hero-module{
+        video{
+            display: block;
+        }
     }
 }
 
