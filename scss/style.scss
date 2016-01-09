@@ -1,6 +1,9 @@
 /**
  *Base
  **/
+
+$color1:#929BA2; //primary color
+
 body{
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -17,6 +20,7 @@ main{
     width: 100%;
     background-color: #fff;
     position: relative;
+    overflow: hidden;
 
     .border-top, .border-bottom{
         background-image: url(../img/border-horz-mid.png);
@@ -24,6 +28,7 @@ main{
         position: absolute;
         width: 100%;
         height: 10px;
+        z-index: 5;
 
         &:before, &:after{
             content: '';
@@ -57,6 +62,7 @@ main{
         position: absolute;
         height: 100%;
         width: 10px;
+        z-index: 5;
     }
 
     img{
@@ -90,6 +96,8 @@ main{
         &.home{
             text-align: center;
         }
+
+
     }
 
     .pic-bg {
@@ -134,57 +142,62 @@ main{
 }
 
 nav{
-    height: 50px;
+    height: auto;
     padding: 10px 0;
 
     ul{
         padding: 0;
+        font-size: 0;
         margin: 0;
+        text-align: justify;
+        text-justify: distribute;
+        width: 100%;
 
         li{
+            position: relative;
+            display: block;
+            vertical-align: top;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 100;
             list-style: none;
-        }
 
-        ul{
-            padding: 0;
-            font-size: 0;
-            margin: 0;
-            text-align: justify;
-            text-justify: distribute;
-            width: 100%;
+            &.active{
+                a{
+                    color: $color1;
+                }
+            }
 
-            li{
-                position: relative;
-                display: inline-block;
-                vertical-align: top;
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 30px;
-                font-weight: 100;
+            a{
                 color: #fff;
+                text-decoration: none;
+
+                &:hover{
+                    color: $color1;
+                    transition: all ease-in-out 500ms
+                }
             }
-
-            &:first-child{
-                margin-bottom: 10px;
-            }
-        }
-
-        & > li:nth-child(1) ul li{
-            font-size: 13px;
-        }
-
-        & > li:nth-child(2) ul li{
-            font-size: 10px;
-        }
-
-        &:after {
-            content: '';
-            display: inline-block;
-            width: 100%;
         }
     }
 }
 
+ul.item-set{
+    font-size: 0;
+
+    .item{
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        height: 150px;
+        list-style: none;
+
+        .item-container{
+            padding: 5px 10px;
+            background: #f7f7f7;
+        }
+    }
+}
 
 footer{
     .footer-logo{
@@ -193,52 +206,41 @@ footer{
     }
 }
 
+/*RSVP Page*/
+#RSVPifyIFrame{
+    width: 108%!important;
+    border: none;
+    margin: -29px -4% -155px;
+}
+
+.rsvp-bg-hack{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    background: #fff;
+    height: 20px;
+}
+
 @import "video";
-@media all and (min-width: 360px){
-    nav{
-        ul{
-            & > li:nth-child(1) ul li{
-                font-size: 14px;
-            }
-
-            & > li:nth-child(2) ul li{
-                font-size: 11px;
-            }
-        }
-    }
-}
-
-@media all and (min-width: 480px){
-    nav{
-        height: 67px;
-
-        ul{
-            & > li:nth-child(1) ul li{
-                font-size: 20px;
-            }
-
-            & > li:nth-child(2) ul li{
-                font-size: 15px;
-            }
-        }
-    }
-}
 
 @media all and (min-width: 600px){
     nav{
         padding: 0;
 
         ul{
-            & > li:nth-child(1) ul li{
-                font-size: 25px;
+            margin-bottom: 5px;
+
+            li{
+                display: inline-block;
             }
 
-            & > li:nth-child(2) ul li{
-                font-size: 19px;
-            }
-
-            ul:first-child{
-                margin: 0;
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 100%;
             }
         }
     }
@@ -265,6 +267,16 @@ footer{
             margin: 0;
         }
     }
+
+    /*RSVP Page*/
+    #RSVPifyIFrame{
+        width: 105%!important;
+        margin: -29px -2% -155px;
+    }
+
+    .rsvp-bg-hack{
+        height: 20px;
+    }
 }
 
 @media all and (min-width: 767px){
@@ -273,17 +285,16 @@ footer{
     }
 
     nav{
-        height: 83px;
-
         ul{
-            & > li:nth-child(1) ul li{
-                font-size: 30px;
-            }
-
-            & > li:nth-child(2) ul li{
-                font-size: 23px;
+            li{
+                font-size: 26px;
             }
         }
+    }
+
+    /*RSVP Page*/
+    #RSVPifyIFrame{
+        width: 104%!important;
     }
 }
 

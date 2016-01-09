@@ -24,46 +24,14 @@
         <![endif]-->
 
         <div class="wrapper">
-            <header>
-                <div class="top-header">
-                    <div class="date"><img src="img/date.png" alt="August 27th 2016" title="August 27th 2016"/></div>
-                    <div class="logo"><img src="img/title.png" alt="Love By The Lake" title="Love By The Lake"/></div>
-                    <div class="seperator"><img src="img/border.png"/></div>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <ul>
-                                <li>RSVP</li>
-                                <li>Venue</li>
-                                <li>Accomodations</li>
-                                <li>Packing List</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul>
-                                <li>Transportation</li>
-                                <li>Leave A Message</li>
-                                <li>Menu</li>
-                                <li>Stag And Doe</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            <?php include('include/header.php'); ?>
             <main>
                 <div class="border-top"></div>
                 <div class="border-left"></div>
                 <div class="border-right"></div>
                 <div class="border-bottom"></div>
-                <div class="wrap home">
-                    <div class="pic-bg"></div>
-                    <h2>Hello Friends & Family!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nibh euismod erat cursus luctus sodales in nibh. <br/> <br/> Scelerisque orci vitae, posuere nisi. Proin massa erat, finibus ut blandit dapibus, faucibus vel dolor. Fusce in mauris sollicitudin, feugiat diam in, fermentum elit. Curabitur porta dolor a felis feugiat condimentum. Aliquam aliquet eu mauris eget interdum. Pellentesque maximus at arcu vel egestas. Nam at tellus ipsum. Phasellus non augue nulla. Nulla in sapien pretium, imperdiet odio eu, lobortis risus. In hac habitasse platea dictumst. Suspendisse potenti. Cras ultrices volutpat tortor vel egestas.</p>
-                    <div class="link-area">
-                        <button><a href="#">RSVP</a></button>
-                        <button><a href="#">Save the date</a></button>
-                    </div>
+                <div id="content-area" class="wrap">
+                    <?php include('pages/home.html'); ?>
                 </div>
             </main>
             <footer>
@@ -91,6 +59,7 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

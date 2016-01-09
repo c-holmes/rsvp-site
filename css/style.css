@@ -1,101 +1,104 @@
 /**
  *Base
  **/
-/* line 4, ../scss/style.scss */
+/* line 7, ../scss/style.scss */
 body {
   font-family: 'Roboto', sans-serif;
   position: relative;
 }
 
-/* line 9, ../scss/style.scss */
+/* line 12, ../scss/style.scss */
 .wrapper {
   padding: 0 20px;
   max-width: 755px;
   margin: 0 auto;
 }
 
-/* line 15, ../scss/style.scss */
+/* line 18, ../scss/style.scss */
 main {
   min-height: 400px;
   width: 100%;
   background-color: #fff;
   position: relative;
+  overflow: hidden;
 }
-/* line 21, ../scss/style.scss */
+/* line 25, ../scss/style.scss */
 main .border-top, main .border-bottom {
   background-image: url(../img/border-horz-mid.png);
   background-repeat: repeat-x;
   position: absolute;
   width: 100%;
   height: 10px;
+  z-index: 5;
 }
-/* line 28, ../scss/style.scss */
+/* line 33, ../scss/style.scss */
 main .border-top:before, main .border-top:after, main .border-bottom:before, main .border-bottom:after {
   content: '';
   position: absolute;
   width: 49px;
   height: 10px;
 }
-/* line 35, ../scss/style.scss */
+/* line 40, ../scss/style.scss */
 main .border-top:before, main .border-bottom:before {
   left: -3px;
   background-image: url(../img/border-horz-left.png);
 }
-/* line 40, ../scss/style.scss */
+/* line 45, ../scss/style.scss */
 main .border-top:after, main .border-bottom:after {
   right: -3px;
   background-image: url(../img/border-horz-right.png);
 }
-/* line 46, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
 main .border-top {
   top: -3px;
 }
-/* line 50, ../scss/style.scss */
+/* line 55, ../scss/style.scss */
 main .border-bottom {
   bottom: -3px;
 }
-/* line 54, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 main .border-left, main .border-right {
   background-image: url(../img/border-vertical-mid.png);
   background-repeat: repeat-y;
   position: absolute;
   height: 100%;
   width: 10px;
+  z-index: 5;
 }
-/* line 62, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 main img {
   max-width: 300px;
   float: left;
   padding-right: 10px;
 }
-/* line 68, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 main h2 {
   margin: 0;
   padding: 10px 0 0 0;
   font-size: 20px;
   font-weight: 300;
 }
-/* line 75, ../scss/style.scss */
+/* line 81, ../scss/style.scss */
 main p {
   font-weight: 300;
 }
-/* line 79, ../scss/style.scss */
+/* line 85, ../scss/style.scss */
 main .border-left {
   left: -4px;
 }
-/* line 83, ../scss/style.scss */
+/* line 89, ../scss/style.scss */
 main .border-right {
   right: -4px;
 }
-/* line 87, ../scss/style.scss */
+/* line 93, ../scss/style.scss */
 main .wrap {
   padding: 10px;
 }
-/* line 90, ../scss/style.scss */
+/* line 96, ../scss/style.scss */
 main .wrap.home {
   text-align: center;
 }
-/* line 95, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 main .pic-bg {
   background-image: url(../img/chris-emma-pic.jpg);
   background-position: top center;
@@ -104,55 +107,46 @@ main .pic-bg {
   padding: 30%;
   box-sizing: border-box;
 }
-/* line 104, ../scss/style.scss */
+/* line 112, ../scss/style.scss */
 main .link-area {
   margin-bottom: 10px;
 }
-/* line 107, ../scss/style.scss */
+/* line 115, ../scss/style.scss */
 main .link-area button {
   background: #A9B6C2;
   border: 0;
   padding: 3px 10px;
 }
-/* line 112, ../scss/style.scss */
+/* line 120, ../scss/style.scss */
 main .link-area button a {
   color: #fff;
   text-decoration: none;
   font-weight: 100;
   font-size: 18px;
 }
-/* line 120, ../scss/style.scss */
+/* line 128, ../scss/style.scss */
 main .link-area button:first-child {
   background: #929BA2;
 }
 
-/* line 126, ../scss/style.scss */
+/* line 134, ../scss/style.scss */
 .top-header {
   text-align: center;
   padding-top: 15px;
 }
-/* line 130, ../scss/style.scss */
+/* line 138, ../scss/style.scss */
 .top-header img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 136, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 nav {
-  height: 50px;
+  height: auto;
   padding: 10px 0;
 }
-/* line 140, ../scss/style.scss */
-nav ul {
-  padding: 0;
-  margin: 0;
-}
-/* line 144, ../scss/style.scss */
-nav ul li {
-  list-style: none;
-}
 /* line 148, ../scss/style.scss */
-nav ul ul {
+nav ul {
   padding: 0;
   font-size: 0;
   margin: 0;
@@ -161,44 +155,78 @@ nav ul ul {
   width: 100%;
 }
 /* line 156, ../scss/style.scss */
-nav ul ul li {
+nav ul li {
   position: relative;
-  display: inline-block;
+  display: block;
   vertical-align: top;
   text-align: center;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 100;
-  color: #fff;
+  list-style: none;
 }
 /* line 167, ../scss/style.scss */
-nav ul ul:first-child {
-  margin-bottom: 10px;
+nav ul li.active a {
+  color: #929BA2;
 }
 /* line 172, ../scss/style.scss */
-nav ul > li:nth-child(1) ul li {
-  font-size: 13px;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 /* line 176, ../scss/style.scss */
-nav ul > li:nth-child(2) ul li {
-  font-size: 10px;
-}
-/* line 180, ../scss/style.scss */
-nav ul:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
+nav ul li a:hover {
+  color: #929BA2;
+  transition: all ease-in-out 500ms;
 }
 
-/* line 190, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
+ul.item-set {
+  font-size: 0;
+}
+/* line 188, ../scss/style.scss */
+ul.item-set .item {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 150px;
+  list-style: none;
+}
+/* line 195, ../scss/style.scss */
+ul.item-set .item .item-container {
+  padding: 5px 10px;
+  background: #f7f7f7;
+}
+
+/* line 203, ../scss/style.scss */
 footer .footer-logo {
   text-align: center;
   margin: 20px 0;
 }
 
-/* line 5, ../scss/_video.scss */
-.homepage-hero-module {
+/*RSVP Page*/
+/* line 210, ../scss/style.scss */
+#RSVPifyIFrame {
+  width: 108% !important;
+  border: none;
+  margin: -29px -4% -155px;
+}
+
+/* line 216, ../scss/style.scss */
+.rsvp-bg-hack {
+  content: '';
   position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  background: #fff;
+  height: 20px;
+}
+
+/* line 6, ../scss/_video.scss */
+.homepage-hero-module {
+  position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -209,7 +237,7 @@ footer .footer-logo {
   background-position: top center;
   background-repeat: no-repeat;
 }
-/* line 17, ../scss/_video.scss */
+/* line 18, ../scss/_video.scss */
 .homepage-hero-module .filter {
   background-color: rgba(255, 255, 255, 0.2);
   position: absolute;
@@ -217,9 +245,9 @@ footer .footer-logo {
   height: 100%;
   top: 0;
   /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(rgba(255, 255, 255, 0)));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(rgba(255, 255, 255, 0.6)));
   /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, white 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 70%, white 100%);
   /* Firefox 3.6+ */
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), white);
   /* IE 10 */
@@ -227,64 +255,51 @@ footer .footer-logo {
   /* Opera 11.10+ */
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0), white);
 }
-/* line 40, ../scss/_video.scss */
+/* line 41, ../scss/_video.scss */
 .homepage-hero-module video {
   display: none;
 }
 
 @media all and (min-width: 767px) {
-  /* line 46, ../scss/_video.scss */
+  /* line 47, ../scss/_video.scss */
   .homepage-hero-module {
     height: 100%;
   }
-  /* line 49, ../scss/_video.scss */
+  /* line 50, ../scss/_video.scss */
   .homepage-hero-module video {
     display: block;
   }
 }
-@media all and (min-width: 360px) {
-  /* line 200, ../scss/style.scss */
-  nav ul > li:nth-child(1) ul li {
-    font-size: 14px;
-  }
-  /* line 204, ../scss/style.scss */
-  nav ul > li:nth-child(2) ul li {
-    font-size: 11px;
-  }
-}
-@media all and (min-width: 480px) {
-  /* line 212, ../scss/style.scss */
-  nav {
-    height: 67px;
-  }
-  /* line 216, ../scss/style.scss */
-  nav ul > li:nth-child(1) ul li {
-    font-size: 20px;
-  }
-  /* line 220, ../scss/style.scss */
-  nav ul > li:nth-child(2) ul li {
-    font-size: 15px;
+@media all and (min-width: 1400px) {
+  /* line 58, ../scss/_video.scss */
+  .homepage-hero-module .filter {
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 40%, white 100%);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), white);
   }
 }
 @media all and (min-width: 600px) {
-  /* line 228, ../scss/style.scss */
+  /* line 230, ../scss/style.scss */
   nav {
     padding: 0;
   }
-  /* line 232, ../scss/style.scss */
-  nav ul > li:nth-child(1) ul li {
-    font-size: 25px;
+  /* line 233, ../scss/style.scss */
+  nav ul {
+    margin-bottom: 5px;
   }
   /* line 236, ../scss/style.scss */
-  nav ul > li:nth-child(2) ul li {
-    font-size: 19px;
+  nav ul li {
+    display: inline-block;
   }
   /* line 240, ../scss/style.scss */
-  nav ul ul:first-child {
-    margin: 0;
+  nav ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
   }
 
-  /* line 247, ../scss/style.scss */
+  /* line 249, ../scss/style.scss */
   main .pic-bg {
     float: left;
     margin-right: 10px;
@@ -292,45 +307,55 @@ footer .footer-logo {
     height: 380px;
     padding: 0;
   }
-  /* line 256, ../scss/style.scss */
+  /* line 258, ../scss/style.scss */
   main .wrap.home {
     text-align: left;
   }
-  /* line 261, ../scss/style.scss */
+  /* line 263, ../scss/style.scss */
   main .link-area {
     position: absolute;
     bottom: 10px;
     right: 10px;
     margin: 0;
   }
+
+  /*RSVP Page*/
+  /* line 272, ../scss/style.scss */
+  #RSVPifyIFrame {
+    width: 105% !important;
+    margin: -29px -2% -155px;
+  }
+
+  /* line 277, ../scss/style.scss */
+  .rsvp-bg-hack {
+    height: 20px;
+  }
 }
 @media all and (min-width: 767px) {
-  /* line 271, ../scss/style.scss */
+  /* line 283, ../scss/style.scss */
   body {
     background-image: none;
   }
 
-  /* line 275, ../scss/style.scss */
-  nav {
-    height: 83px;
+  /* line 289, ../scss/style.scss */
+  nav ul li {
+    font-size: 26px;
   }
-  /* line 279, ../scss/style.scss */
-  nav ul > li:nth-child(1) ul li {
-    font-size: 30px;
-  }
-  /* line 283, ../scss/style.scss */
-  nav ul > li:nth-child(2) ul li {
-    font-size: 23px;
+
+  /*RSVP Page*/
+  /* line 296, ../scss/style.scss */
+  #RSVPifyIFrame {
+    width: 104% !important;
   }
 }
 @media all and (min-width: 1300px) {
-  /* line 291, ../scss/style.scss */
+  /* line 302, ../scss/style.scss */
   .wrapper {
     padding-top: 2%;
   }
 }
 @media all and (min-width: 1500px) {
-  /* line 297, ../scss/style.scss */
+  /* line 308, ../scss/style.scss */
   .wrapper {
     padding-top: 4%;
   }
