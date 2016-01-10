@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -30,8 +31,11 @@
                 <div class="border-left"></div>
                 <div class="border-right"></div>
                 <div class="border-bottom"></div>
-                <div id="content-area" class="wrap">
-                    <?php include('pages/home.html'); ?>
+                <div class="content-container wrap">
+                    <?php include('include/submenu.php'); ?>
+                    <div id="content-area">
+                        <?php include('pages/home.html'); ?>
+                    </div>
                 </div>
             </main>
             <footer>
@@ -59,7 +63,7 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="http://app.rsvpify.com/js/iframeResizer.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

@@ -66,39 +66,47 @@ main .border-left, main .border-right {
   z-index: 5;
 }
 /* line 68, ../scss/style.scss */
+main .sub-menu {
+  display: none;
+}
+/* line 73, ../scss/style.scss */
+main .show-sub-menu .sub-menu, main .panel-sub-menu .sub-menu {
+  display: block;
+}
+/* line 78, ../scss/style.scss */
 main img {
   max-width: 300px;
   float: left;
   padding-right: 10px;
 }
-/* line 74, ../scss/style.scss */
+/* line 84, ../scss/style.scss */
 main h2 {
   margin: 0;
   padding: 10px 0 0 0;
   font-size: 20px;
   font-weight: 300;
 }
-/* line 81, ../scss/style.scss */
+/* line 91, ../scss/style.scss */
 main p {
   font-weight: 300;
 }
-/* line 85, ../scss/style.scss */
+/* line 95, ../scss/style.scss */
 main .border-left {
   left: -4px;
 }
-/* line 89, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 main .border-right {
   right: -4px;
 }
-/* line 93, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 main .wrap {
   padding: 10px;
 }
-/* line 96, ../scss/style.scss */
+/* line 106, ../scss/style.scss */
 main .wrap.home {
   text-align: center;
 }
-/* line 103, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 main .pic-bg {
   background-image: url(../img/chris-emma-pic.jpg);
   background-position: top center;
@@ -107,45 +115,45 @@ main .pic-bg {
   padding: 30%;
   box-sizing: border-box;
 }
-/* line 112, ../scss/style.scss */
+/* line 120, ../scss/style.scss */
 main .link-area {
   margin-bottom: 10px;
 }
-/* line 115, ../scss/style.scss */
+/* line 123, ../scss/style.scss */
 main .link-area button {
   background: #A9B6C2;
   border: 0;
   padding: 3px 10px;
 }
-/* line 120, ../scss/style.scss */
+/* line 128, ../scss/style.scss */
 main .link-area button a {
   color: #fff;
   text-decoration: none;
   font-weight: 100;
   font-size: 18px;
 }
-/* line 128, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 main .link-area button:first-child {
   background: #929BA2;
 }
 
-/* line 134, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 .top-header {
   text-align: center;
   padding-top: 15px;
 }
-/* line 138, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .top-header img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 144, ../scss/style.scss */
+/* line 152, ../scss/style.scss */
 nav {
   height: auto;
   padding: 10px 0;
 }
-/* line 148, ../scss/style.scss */
+/* line 156, ../scss/style.scss */
 nav ul {
   padding: 0;
   font-size: 0;
@@ -154,7 +162,7 @@ nav ul {
   text-justify: distribute;
   width: 100%;
 }
-/* line 156, ../scss/style.scss */
+/* line 164, ../scss/style.scss */
 nav ul li {
   position: relative;
   display: block;
@@ -165,54 +173,126 @@ nav ul li {
   font-weight: 100;
   list-style: none;
 }
-/* line 167, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 nav ul li.active a {
   color: #929BA2;
 }
-/* line 172, ../scss/style.scss */
+/* line 180, ../scss/style.scss */
 nav ul li a {
   color: #fff;
   text-decoration: none;
 }
-/* line 176, ../scss/style.scss */
+/* line 184, ../scss/style.scss */
 nav ul li a:hover {
   color: #929BA2;
   transition: all ease-in-out 500ms;
 }
 
-/* line 185, ../scss/style.scss */
-ul.item-set {
+/*Details Page*/
+/* line 194, ../scss/style.scss */
+.panel-sub-menu ul.sub-menu {
   font-size: 0;
+  margin: 0;
+  padding: 0;
 }
-/* line 188, ../scss/style.scss */
-ul.item-set .item {
+/* line 199, ../scss/style.scss */
+.panel-sub-menu ul.sub-menu .link {
   display: inline-block;
   vertical-align: top;
-  width: 50%;
-  height: 150px;
+  width: 100%;
+  padding: 5px;
   list-style: none;
+  background: #fff;
+  box-sizing: border-box;
 }
-/* line 195, ../scss/style.scss */
-ul.item-set .item .item-container {
-  padding: 5px 10px;
-  background: #f7f7f7;
+/* line 208, ../scss/style.scss */
+.panel-sub-menu ul.sub-menu .link a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  background: #bbb;
+  padding: 37px 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  text-align: center;
 }
 
-/* line 203, ../scss/style.scss */
+/*sub-menu*/
+/* line 224, ../scss/style.scss */
+.show-sub-menu {
+  margin-bottom: 95px;
+}
+/* line 227, ../scss/style.scss */
+.show-sub-menu ul.sub-menu {
+  font-size: 0;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 10px 17px;
+  box-sizing: border-box;
+}
+/* line 238, ../scss/style.scss */
+.show-sub-menu ul.sub-menu:before {
+  content: '';
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 2px;
+  height: 1px;
+  background-color: #ddd;
+}
+/* line 251, ../scss/style.scss */
+.show-sub-menu ul.sub-menu .link {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  padding: 5px 2px;
+  list-style: none;
+  background: #fff;
+  box-sizing: border-box;
+}
+/* line 260, ../scss/style.scss */
+.show-sub-menu ul.sub-menu .link a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  background: #eee;
+  padding: 5px 5px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+}
+/* line 272, ../scss/style.scss */
+.show-sub-menu ul.sub-menu .link.active a, .show-sub-menu ul.sub-menu .link:hover a {
+  background-color: #929BA2;
+  color: #fff;
+  transition: background-color ease-in-out 500ms;
+}
+
+/* line 282, ../scss/style.scss */
 footer .footer-logo {
   text-align: center;
   margin: 20px 0;
 }
 
 /*RSVP Page*/
-/* line 210, ../scss/style.scss */
+/* line 289, ../scss/style.scss */
 #RSVPifyIFrame {
   width: 108% !important;
   border: none;
   margin: -29px -4% -155px;
 }
 
-/* line 216, ../scss/style.scss */
+/* line 295, ../scss/style.scss */
 .rsvp-bg-hack {
   content: '';
   position: absolute;
@@ -280,26 +360,26 @@ footer .footer-logo {
   }
 }
 @media all and (min-width: 600px) {
-  /* line 230, ../scss/style.scss */
+  /* line 310, ../scss/style.scss */
   nav {
     padding: 0;
   }
-  /* line 233, ../scss/style.scss */
+  /* line 313, ../scss/style.scss */
   nav ul {
     margin-bottom: 5px;
   }
-  /* line 236, ../scss/style.scss */
+  /* line 316, ../scss/style.scss */
   nav ul li {
     display: inline-block;
   }
-  /* line 240, ../scss/style.scss */
+  /* line 320, ../scss/style.scss */
   nav ul:after {
     content: '';
     display: inline-block;
     width: 100%;
   }
 
-  /* line 249, ../scss/style.scss */
+  /* line 329, ../scss/style.scss */
   main .pic-bg {
     float: left;
     margin-right: 10px;
@@ -307,11 +387,11 @@ footer .footer-logo {
     height: 380px;
     padding: 0;
   }
-  /* line 258, ../scss/style.scss */
+  /* line 338, ../scss/style.scss */
   main .wrap.home {
     text-align: left;
   }
-  /* line 263, ../scss/style.scss */
+  /* line 343, ../scss/style.scss */
   main .link-area {
     position: absolute;
     bottom: 10px;
@@ -320,42 +400,97 @@ footer .footer-logo {
   }
 
   /*RSVP Page*/
-  /* line 272, ../scss/style.scss */
+  /* line 352, ../scss/style.scss */
   #RSVPifyIFrame {
     width: 105% !important;
     margin: -29px -2% -155px;
   }
 
-  /* line 277, ../scss/style.scss */
+  /* line 357, ../scss/style.scss */
   .rsvp-bg-hack {
     height: 20px;
   }
+
+  /*Details Page*/
+  /* line 363, ../scss/style.scss */
+  .panel-sub-menu ul.sub-menu .link {
+    width: 50%;
+  }
+  /* line 366, ../scss/style.scss */
+  .panel-sub-menu ul.sub-menu .link .item-container {
+    height: 116px;
+  }
+
+  /*sub-menu*/
+  /* line 373, ../scss/style.scss */
+  .show-sub-menu {
+    margin-bottom: 70px;
+  }
+  /* line 376, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu {
+    text-align: justify;
+  }
+  /* line 379, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu:before {
+    width: 95%;
+  }
+  /* line 383, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  /* line 389, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu .link {
+    padding: 5px 0;
+  }
+  /* line 392, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu .link a {
+    padding: 5px 7px;
+    font-size: 15px;
+  }
 }
 @media all and (min-width: 767px) {
-  /* line 283, ../scss/style.scss */
+  /* line 402, ../scss/style.scss */
   body {
     background-image: none;
   }
 
-  /* line 289, ../scss/style.scss */
+  /* line 408, ../scss/style.scss */
   nav ul li {
     font-size: 26px;
   }
 
   /*RSVP Page*/
-  /* line 296, ../scss/style.scss */
+  /* line 415, ../scss/style.scss */
   #RSVPifyIFrame {
     width: 104% !important;
   }
+
+  /*sub-menu*/
+  /* line 420, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu {
+    text-align: justify;
+  }
+  /* line 423, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu:before {
+    width: 100%;
+    max-width: 720px;
+  }
+  /* line 429, ../scss/style.scss */
+  .show-sub-menu ul.sub-menu .link a {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
 }
 @media all and (min-width: 1300px) {
-  /* line 302, ../scss/style.scss */
+  /* line 438, ../scss/style.scss */
   .wrapper {
     padding-top: 2%;
   }
 }
 @media all and (min-width: 1500px) {
-  /* line 308, ../scss/style.scss */
+  /* line 444, ../scss/style.scss */
   .wrapper {
     padding-top: 4%;
   }

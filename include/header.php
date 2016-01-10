@@ -10,16 +10,16 @@
     </div>
     <nav>
         <ul class="content-links primary">
-            <li id="rsvp-pg">
+            <li class="link" id="rsvp-pg">
                 <a href="#">RSVP</a>
             </li>
-            <li id="details-pg">
+            <li class="link" id="details-pg">
                 <a href="#">Wedding Details</a>
             </li>
-            <li id="accomodations-pg">
+            <li class="link" id="accomodations-pg">
                 <a href="#">Accommodations</a>
             </li>
-            <li id="staganddoe-pg">
+            <li class="link" id="staganddoe-pg">
                 <a href="#">Stag & Doe</a>
             </li>
         </ul>

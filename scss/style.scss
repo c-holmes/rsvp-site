@@ -65,6 +65,16 @@ main{
         z-index: 5;
     }
 
+    .sub-menu{
+        display: none;
+    }
+
+    .show-sub-menu, .panel-sub-menu{
+        .sub-menu{
+            display: block;
+        }
+    }
+
     img{
         max-width: 300px;
         float: left;
@@ -96,8 +106,6 @@ main{
         &.home{
             text-align: center;
         }
-
-
     }
 
     .pic-bg {
@@ -182,19 +190,90 @@ nav{
     }
 }
 
-ul.item-set{
+/*Details Page*/
+.panel-sub-menu ul.sub-menu{
     font-size: 0;
+    margin: 0;
+    padding:0;
 
-    .item{
+    .link{
         display: inline-block;
         vertical-align: top;
-        width: 50%;
-        height: 150px;
+        width: 100%;
+        padding: 5px;
         list-style: none;
+        background: #fff;
+        box-sizing: border-box;
 
-        .item-container{
-            padding: 5px 10px;
-            background: #f7f7f7;
+        a{
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            background: #bbb;
+            padding: 37px 0;
+            margin: 0;
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+            text-align: center;
+        }
+    }
+}
+
+/*sub-menu*/
+.show-sub-menu {
+    margin-bottom: 95px;
+
+    ul.sub-menu {
+        font-size: 0;
+        margin: 0;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 10px 17px;
+        box-sizing: border-box;
+
+        &:before {
+            content: '';
+            width: 90%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            position: absolute;
+            top: 2px;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+        .link {
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            padding: 5px 2px;
+            list-style: none;
+            background: #fff;
+            box-sizing: border-box;
+
+            a {
+                display: block;
+                color: #000;
+                text-decoration: none;
+                background: #eee;
+                padding: 5px 5px;
+                margin: 0;
+                font-size: 13px;
+                font-weight: 300;
+                text-align: center;
+            }
+
+            &.active a, &:hover a {
+                background-color: $color1;
+                color: #fff;
+                transition: background-color ease-in-out 500ms;
+            }
         }
     }
 }
@@ -227,6 +306,7 @@ footer{
 @import "video";
 
 @media all and (min-width: 600px){
+
     nav{
         padding: 0;
 
@@ -244,7 +324,7 @@ footer{
             }
         }
     }
-    
+
     main{
         .pic-bg {
             float: left;
@@ -277,6 +357,45 @@ footer{
     .rsvp-bg-hack{
         height: 20px;
     }
+
+    /*Details Page*/
+    .panel-sub-menu ul.sub-menu{
+        .link{
+            width: 50%;
+
+            .item-container{
+                height: 116px;
+            }
+        }
+    }
+
+    /*sub-menu*/
+    .show-sub-menu {
+        margin-bottom: 70px;
+
+        ul.sub-menu {
+            text-align: justify;
+
+            &:before {
+                width: 95%;
+            }
+
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+            }
+
+            .link {
+                padding: 5px 0;
+
+                a {
+                    padding: 5px 7px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 }
 
 @media all and (min-width: 767px){
@@ -295,6 +414,23 @@ footer{
     /*RSVP Page*/
     #RSVPifyIFrame{
         width: 104%!important;
+    }
+
+    /*sub-menu*/
+    .show-sub-menu ul.sub-menu{
+        text-align: justify;
+
+        &:before{
+            width: 100%;
+            max-width: 720px;
+        }
+
+        .link{
+            a{
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+        }
     }
 }
 
